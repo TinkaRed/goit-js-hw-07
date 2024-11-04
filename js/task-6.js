@@ -6,10 +6,9 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-//це елементи
 const input = document.querySelector("#controls input");
-const createButton = document.querySelector("[data-create]");
-const destroyButton = document.querySelector("[data-destroy]");
+const buttonCreate = document.querySelector("[data-create]");
+const buttonDestroy = document.querySelector("[data-destroy]");
 const boxesContainer = document.querySelector("#boxes");
 
 function createBoxes(amount) {
@@ -32,7 +31,7 @@ for (let i = 0; i < amount; i++) {
   boxesContainer.append(...newBoxes);
 }
 
-createButton.addEventListener("click", () => {
+buttonCreate.addEventListener("click", () => {
   const amount = parseInt(input.value.trim(), 10);
 
   if (amount >= 1 && amount <= 100) {
@@ -47,4 +46,4 @@ function destroyBoxes() {
   boxesContainer.innerHTML = "";
 }
 
-destroyButton.addEventListener("click", destroyBoxes);
+buttonDestroy.addEventListener("click", destroyBoxes);

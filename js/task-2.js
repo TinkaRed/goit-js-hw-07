@@ -1,3 +1,5 @@
+//done
+
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -27,8 +29,8 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-const galleryItems = images
+const galleryImages = images
   .map(({ url, alt }) => `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-img"></li>`)
   .join("");
 
-gallery.insertAdjacentHTML("beforeend", galleryItems);
+gallery.insertAdjacentHTML("beforeend", galleryImages);
